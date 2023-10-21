@@ -1,9 +1,18 @@
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const AddProduct = () => {
+const Update = () => {
+
+    const product = useLoaderData()
+    const navigate = useNavigate()
+    
+    
+    
 
     const handleForm = e => {
         e.preventDefault()
+
+
 
         const form = e.target
         const name = form.name.value 
@@ -18,49 +27,49 @@ const AddProduct = () => {
 
         const newProduct = {name, type, brand, price, rating, description, photo}
         
-        
 
-        fetch('http://localhost:5000/products', {
-            method: 'POST',
+        fetch(`http://localhost:5000/products/${product._id}`,{
+            method: 'PUT',
             headers: {
-                'content-type' : 'application/json'
+                'content-type': 'application/json'
             },
             body: JSON.stringify(newProduct)
         })
         .then(res => res.json())
-        .then(data => 
-            {
-                console.log(data)
-                if(data.insertedId){
-                    toast.success('Product Added Successfully')
-                }
-            })
-
+        .then(data => {
+            if(data.acknowledged){
+                toast.success('Update Successfully')
+                navigate(`/details/${product._id}`)
+            }
+        })
+       
+        
+        
     }
     return (
         <div>
             <div className="flex justify-center">
 
-                <form onSubmit={handleForm} className="bg-purple-200 md:p-10 lg:w-3/4 p-5 my-10 rounded-lg">
-                    <h2 className="text-3xl font-bold">Add New Product</h2>
+                <form onSubmit={handleForm} className="bg-amber-200 md:p-10 lg:w-3/4 p-5 my-10 rounded-lg">
+                    <h2 className="text-3xl font-bold">Update Product</h2>
                     <div className="grid md:grid-cols-2 gap-5">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" name="name" placeholder="Enter product name" className="input input-bordered" required />
+                            <input type="text" name="name" defaultValue={product.name} placeholder="Enter product name" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Type </span>
                             </label>
-                            <input type="text" name="type" placeholder="Enter product type" className="input input-bordered" required />
+                            <input type="text" name="type" defaultValue={product.type} placeholder="Enter product type" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Brand Name</span>
                             </label>
-                            <select name="brand" className="select select-bordered w-full max-w-xs" required>
+                            <select defaultValue={product.brand} name="brand" className="select select-bordered w-full max-w-xs" required>
                                 <option>Apple</option>
                                 <option>Samsung</option>
                                 <option>Sony</option>
@@ -74,32 +83,32 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text">Price</span>
                             </label>
-                            <input type="number" name="price" placeholder="Enter product price" className="input input-bordered" required />
+                            <input type="number" name="price" defaultValue={product.price} placeholder="Enter product price" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Ratting</span>
                             </label>
-                            <input type="number" min='0' max='5' name="rating" placeholder="Enter product rating" className="input input-bordered" required />
+                            <input type="number" min='0' max='5' name="rating" defaultValue={product.rating} placeholder="Enter product rating" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Description</span>
                             </label>
-                            <input type="text" name="description" placeholder="Enter short description" className="input input-bordered" required />
+                            <input type="text" name="description" defaultValue={product.description} placeholder="Enter short description" className="input input-bordered" required />
                         </div>
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Photo</span>
                         </label>
-                        <input type="text" name="photo" placeholder="Enter photo URL" className="input input-bordered" required />
+                        <input type="text" name="photo" placeholder="Enter photo URL" defaultValue={product.photo} className="input input-bordered" required />
                     </div>
-                    <input className="btn btn-primary w-full mt-4 border-[#331A15]" type="submit" value="Add Product" />
+                    <input className="btn btn-primary w-full mt-4 border-[#331A15]" type="submit" value="Update Product" />
                 </form>
             </div>
         </div>
     );
 };
 
-export default AddProduct;
+export default Update;

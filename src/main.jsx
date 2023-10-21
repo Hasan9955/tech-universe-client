@@ -16,6 +16,8 @@ import PrivateRoute from './Route Manage/PrivateRoute';
 import Details from './Components/Children/Details';
 import AddProduct from './Components/Children/AddProduct';
 import Products from './Components/Children/Products';
+import { ThemeProvider } from '@material-tailwind/react';
+import Update from './Components/Children/Update';
 
 
 const router = createBrowserRouter([
@@ -35,11 +37,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/cart',
-        element: <PrivateRoute><Cart></Cart></PrivateRoute>
+        element: <PrivateRoute><Cart></Cart></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/cart')
       },
       {
-        path: '/details',
-        element: <PrivateRoute><Details></Details></PrivateRoute>
+        path: '/details/:id',
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
       },
       {
         path: '/login',
@@ -52,8 +56,14 @@ const router = createBrowserRouter([
       {
         path: '/products/:name',
         element: <Products></Products>,
-        loader: ({params}) => fetch(`http://localhost:5000/products/${params.name}`)
-      }
+        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.name}`)
+      },
+      {
+        path: '/update/:id',
+        element: <Update></Update>,
+        loader: ({params}) => fetch(`http://localhost:5000/update/${params.id}`)
+      },
+      
 
     ]
   },
@@ -64,7 +74,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router}></RouterProvider>
+      <ThemeProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </ThemeProvider>
     </AuthProvider>
   </React.StrictMode>,
 )
