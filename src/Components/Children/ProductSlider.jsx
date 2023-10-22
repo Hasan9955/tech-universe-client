@@ -48,7 +48,7 @@ const ProductSlider = () => {
                 }
                 
             </Swiper>
-            this is update
+            
         </div>
     );
 };
