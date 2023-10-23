@@ -15,17 +15,18 @@ const Products = () => {
             {
                 loadProducts.length > 0 ?
                 <div>
-                    <h2 className="text-center text-4xl font-bold text-amber-600">Welcome In {loadProducts[0].brand} Shop</h2>
-                    <div className="grid p-3 my-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <ProductSlider></ProductSlider>
+                    <h2 className="text-center text-2xl md:text-3xl mt-10 font-bold text-pink-600">Welcome to the immersive universe of the {loadProducts[0].brand} Brand !!!</h2>
+                    <div className="grid p-3 mb-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {
                             loadProducts.map(product =>
                                 <div key={product._id}>
-                                    <div className="card bg-base-100 shadow-xl">
-                                        <figure className="px-10 pt-10">
+                                    <div className="card bg-white shadow-xl">
+                                        <figure className="px-5 mt-2">
                                             <img src={product.photo} alt="Shoes" className="rounded-xl" />
                                         </figure>
-                                        <div className="card-body items-center text-center">
-                                            <h2 className="card-title">{product.name}</h2>
+                                        <div className="card-body items-center text-center text-black">
+                                            <h2 className="card-title grow">{product.name}</h2>
                                             <p>Brand: {product.brand}</p>
                                             <p>Type: {product.type}</p>
                                             <p className="text-amber-600 text-xl">Price: $ {product.price}</p>

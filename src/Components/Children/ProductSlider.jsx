@@ -3,7 +3,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { Pagination, Navigation } from 'swiper/modules';
+import { Keyboard, Pagination, Navigation } from 'swiper/modules';
 import { useEffect, useState } from 'react';
 
 
@@ -30,12 +30,15 @@ const ProductSlider = () => {
         <div>
             <Swiper slidesPerView={1}
                 spaceBetween={30}
+                keyboard ={{
+                    enabled: true,
+                  }}
                 loop={true}
                 pagination={{
                     clickable: true,
                 }}
                 navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[ Pagination, Navigation, Keyboard]}
                 className="mySwiper"
             >
                 {

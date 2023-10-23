@@ -1,4 +1,10 @@
 import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import { Autoplay, Keyboard, Pagination, Navigation } from 'swiper/modules';
 
 const Slider = () => {
 
@@ -23,7 +29,57 @@ const Slider = () => {
      */
     return (
        <div>
+        <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        keyboard={{
+          enabled: true,
+        }}
+        autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+        pagination={{
+          clickable: true,
+        }}
+        loop={true}
+        navigation={true}
+        modules={[Autoplay, Keyboard, Pagination, Navigation]}
+        className="mySwiper"
+      >
         {
+            photo && 
+            <div>
+                       
+                        
+                        <SwiperSlide><img className='w-full' src="https://i.ibb.co/VvGbkmz/gaming-laptop.png" alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-full' src="https://i.ibb.co/TLKwXGw/homeslider.png" alt="" /></SwiperSlide>
+                        
+                        <SwiperSlide><img className='w-full' src="https://i.ibb.co/k0c2xcT/Untitled-2.png" alt="" /></SwiperSlide>
+
+                        <SwiperSlide><img className='w-full' src="https://i.ibb.co/fNJfX9F/home-slider.png" alt="" /></SwiperSlide>
+                    </div>
+                    }
+      </Swiper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* {
             photo &&  <div className="md:px-10 p-2 md:py-10 ">
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
@@ -56,7 +112,7 @@ const Slider = () => {
                 </div>
             </div>
         </div>
-        }
+        } */}
        </div>
     );
 };

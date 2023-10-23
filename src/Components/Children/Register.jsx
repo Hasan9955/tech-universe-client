@@ -34,20 +34,18 @@ const Register = () => {
 
                 toast.success('Registration Successful !!!')
                 navigate("/")
+                location.reload()
                 
-
-
-
             })
             .catch(error => setEmailError(error))
 
 
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className=" ">
             <div className="hero-content flex-col ">
-                <div className="text-center lg:text-left">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-5">Register now!</h1>
+                <div className="text-center">
+                    <h1 className="text-4xl font-bold">Register now!</h1>
 
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -93,7 +91,7 @@ const Register = () => {
                             </label>
 
                         </div>
-                        <div className="form-control mt-6">
+                        <div className="form-control">
                             <button className="btn btn-primary">Register</button>
                         </div>
                     </form>

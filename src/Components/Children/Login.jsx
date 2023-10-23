@@ -37,7 +37,7 @@ const Login = () => {
         .catch(error => setError(error))
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className=" ">
             <div className="hero-content flex-col ">
                 <div className="text-center lg:text-left">
                     <h1 className="text-4xl md:text-5xl font-bold">Login now!</h1>
@@ -63,7 +63,7 @@ const Login = () => {
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
-                        <div className="form-control mt-6">
+                        <div className="form-control">
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </form>
