@@ -39,12 +39,14 @@ const ProductSlider = () => {
                 className="mySwiper"
             >
                 {
-                    slides && slides.map(sli => 
-                    <div  key={sli._id}>
+                    slides &&  
+                    <div>
                        
-                        <SwiperSlide><img className='w-full' src={sli.image} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-full' src={slides[0].image} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-full' src={slides[1].image} alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-full' src={slides[2].image} alt="" /></SwiperSlide>
                     </div>
-                   )
+                   
                 }
                 
             </Swiper>

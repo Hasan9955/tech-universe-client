@@ -10,7 +10,7 @@ const Products = () => {
     
     return (
         <div>
-            <ProductSlider></ProductSlider>
+            
             
             {
                 loadProducts.length > 0 ?
@@ -40,9 +40,11 @@ const Products = () => {
                         }
                     </div>
                 </div> :
-                    <div className="text-center my-48 md:my-56">
+                    <div className="text-center mb-36 flex flex-col justify-center items-center">
+                        <img src="https://i.ibb.co/BnMb4PR/no-product-found-1.png" alt="" />
                         <h1 className="text-5xl">Sorry !!!</h1>
                         <h2 className="text-3xl font-bold">This brand currently has no products available for display.</h2>
+                        <Link to='/'><button className="btn btn-primary rounded-full">Go Home</button></Link>
                     </div>
             }
         </div>

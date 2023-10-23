@@ -33,8 +33,8 @@ const Register = () => {
                 })
 
                 toast.success('Registration Successful !!!')
-                navigate('/')
-                location.reload()
+                navigate("/")
+                
 
 
 
@@ -85,9 +85,9 @@ const Register = () => {
                                 {
                                     error &&
                                     <ul className="text-red-400 list-disc text-sm">
-                                        <li>Minimum six in length !</li>
-                                        <li>At least one upper case letter !</li>
-                                        <li>At least one special character !</li>
+                                        <li>Minimum six in length.</li>
+                                        <li>At least one upper case letter.</li>
+                                        <li>At least one special character.</li>
                                     </ul>
                                 }
                             </label>

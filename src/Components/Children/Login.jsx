@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Auth/AuthProvider";
 import { toast } from "react-toastify";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -8,6 +8,7 @@ const Login = () => {
     const { signIn, googleSign } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
+    const [error, setError] = useState(null)
     
 
     const handleGoogleSign = () => {
@@ -25,7 +26,7 @@ const Login = () => {
         const form = e.target
         const email = form.email.value 
         const password = form.password.value  
-        console.log(email, password)
+        setError('')
 
         signIn(email, password)
         .then(() => {
@@ -33,7 +34,7 @@ const Login = () => {
             navigate(location.state)
 
         })
-        .catch(error => console.error(error))
+        .catch(error => setError(error))
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -43,6 +44,9 @@ const Login = () => {
                     
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    {
+                        error && <div><p className="text-red-500 justify-center flex mt-3">Email or password invalid !!!</p></div>
+                    }
                     <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
                             <label className="label">
