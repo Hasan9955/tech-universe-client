@@ -82,11 +82,11 @@ const Cart = () => {
                         }
                     </div> :
                     <div className="flex flex-col text-center justify-center  items-center mb-20 p-2">
-                        <img className="w-1/2" src="https://i.ibb.co/j6MBkVs/image.webp" alt="" />
-                        <h2 className="text-4xl text-amber-800 mb-5">Your cart is currently empty.</h2>
-                        <p className="text-lg max-w-md"> Feel free to browse our products and add items to your cart whenever you are ready to make a purchase. If you have any questions or need assistance, please do not hesitate to reach out.
+                        <img className="w-3/4 md:w-1/2" src="https://i.ibb.co/j6MBkVs/image.webp" alt="" />
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl text-amber-800">Your cart is currently empty.</h2>
+                        <p className="md:text-lg max-w-md"> Feel free to browse our products and add items to your cart whenever you are ready to make a purchase. If you have any questions or need assistance, please do not hesitate to reach out.
                         </p>
-                        <span className="text-4xl text-blue-400 mb-5">Happy shopping!</span>
+                        <span className="md:text-3xl text-2xl lg:text-4xl text-blue-400 mb-5">Happy shopping!</span>
                         <Link to='/'>
                             <button className="btn rounded-full btn-primary">Go Home</button>
                         </Link>

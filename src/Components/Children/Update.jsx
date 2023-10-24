@@ -50,22 +50,22 @@ const Update = () => {
         <div>
             <div className="flex justify-center">
 
-                <form onSubmit={handleForm} className="bg-amber-200 md:p-10 lg:w-3/4 p-5 my-10 rounded-lg">
-                    <h2 className="text-3xl font-bold  text-black">Update Product</h2>
+                <form onSubmit={handleForm} className="bg-amber-200 w-full lg:w-3/4 md:mx-4 mx-2 p-5 my-10 rounded-lg">
+                    <h2 className="text-3xl font-bold  text-black text-center">Update Product</h2>
                     <div className="grid md:grid-cols-2 gap-5">
-                        <div className="form-control">
+                        <div data-aos="fade-right" className="form-control">
                             <label className="label">
                                 <span className="label-text text-black">Name</span>
                             </label>
                             <input type="text" name="name" defaultValue={product.name} placeholder="Enter product name" className="input input-bordered" required />
                         </div>
-                        <div className="form-control">
+                        <div data-aos="fade-left" className="form-control">
                             <label className="label">
                                 <span className="label-text text-black">Type </span>
                             </label>
                             <input type="text" name="type" defaultValue={product.type} placeholder="Enter product type" className="input input-bordered" required />
                         </div>
-                        <div className="form-control">
+                        <div data-aos="fade-right" className="form-control">
                             <label className="label">
                                 <span className="label-text text-black">Brand Name</span>
                             </label>
@@ -79,26 +79,26 @@ const Update = () => {
                             </select>
                         </div>
 
-                        <div className="form-control">
+                        <div data-aos="fade-left" className="form-control">
                             <label className="label">
                                 <span className="label-text text-black">Price</span>
                             </label>
                             <input type="number" name="price" defaultValue={product.price} placeholder="Enter product price" className="input input-bordered" required />
                         </div>
-                        <div className="form-control">
+                        <div data-aos="fade-right" className="form-control">
                             <label className="label">
                                 <span className="label-text text-black">Ratting</span>
                             </label>
                             <input type="number" min='0' max='5' name="rating" defaultValue={product.rating} placeholder="Enter product rating" className="input input-bordered" required />
                         </div>
-                        <div className="form-control">
+                        <div data-aos="fade-left" className="form-control">
                             <label className="label">
                                 <span className="label-text text-black">Description</span>
                             </label>
                             <input type="text" name="description" defaultValue={product.description} placeholder="Enter short description" className="input input-bordered" required />
                         </div>
                     </div>
-                    <div className="form-control">
+                    <div data-aos="fade-right" className="form-control">
                         <label className="label">
                             <span className="label-text text-black">Photo</span>
                         </label>

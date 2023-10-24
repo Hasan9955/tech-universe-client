@@ -32,8 +32,8 @@ const Products = () => {
                                             <p className="text-amber-600 text-xl">Price: $ {product.price}</p>
                                             <Rating value={parseInt(product.rating)} />
                                             <div className="card-actions">
-                                                <Link to={`/details/${product._id}`}><button className="btn btn-primary">Details</button></Link>
-                                                <Link to={`/update/${product._id}`}><button className="btn btn-primary">Update</button></Link>
+                                                <Link to={`/details/${product._id}`}><button onClick={handleWindow} className="btn btn-primary">Details</button></Link>
+                                                <Link to={`/update/${product._id}`}><button onClick={handleWindow} className="btn btn-primary">Update</button></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -43,9 +43,9 @@ const Products = () => {
                 </div> :
                     <div className="text-center mb-36 flex flex-col justify-center items-center">
                         <img src="https://i.ibb.co/BnMb4PR/no-product-found-1.png" alt="" />
-                        <h1 className="text-5xl">Sorry !!!</h1>
-                        <h2 className="text-3xl font-bold">This brand currently has no products available for display.</h2>
-                        <Link to='/'><button onClick={handleWindow} className="btn btn-primary rounded-full">Go Home</button></Link>
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl">Sorry !!!</h1>
+                        <h2 className="lg:text-3xl md:text-2xl text-xl font-bold">This brand currently has no products available for display.</h2>
+                        <Link to='/'><button onClick={handleWindow} className="btn btn-primary rounded-full mt-2">Go Home</button></Link>
                     </div>
             }
         </div>

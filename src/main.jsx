@@ -18,6 +18,9 @@ import AddProduct from './Components/Children/AddProduct';
 import Products from './Components/Children/Products';
 import { ThemeProvider } from '@material-tailwind/react';
 import Update from './Components/Children/Update';
+import MyAccount from './Components/Children/MyAccount';
+import Blogs from './Components/Children/Blogs';
+import BlogDetails from './Components/Children/BlogDetails';
 
 
 const router = createBrowserRouter([
@@ -63,6 +66,20 @@ const router = createBrowserRouter([
         element: <PrivateRoute><Update></Update></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/update/${params.id}`)
       },
+      {
+        path: '/account',
+        element: <PrivateRoute><MyAccount></MyAccount></PrivateRoute>
+      },
+      {
+        path: '/blog',
+        element: <Blogs></Blogs>,
+        loader: () => fetch('http://localhost:5000/blog')
+      },
+      {
+        path: '/blog/:id',
+        element: <BlogDetails></BlogDetails>,
+        loader: ({params}) => fetch(`http://localhost:5000/blog/${params.id}`)
+      }
       
 
     ]

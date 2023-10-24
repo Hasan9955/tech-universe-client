@@ -43,17 +43,20 @@ const Navbar = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/addProduct'>Add Product</NavLink></li>
         <li><NavLink to='/cart'>Cart</NavLink></li>
-        <li><NavLink to='/login'>Login</NavLink></li>
+        <li><NavLink to='/blog'>Blog</NavLink></li>
+        {
+            user && <li><NavLink to='/account'>My Account</NavLink></li>
+        }
 
     </>
     return (
         <div className="navbar bg-white shadow-xl mb-5 rounded-b-xl">
             <div className="navbar-start">
-                <div className="dropdown">
+                <div className="dropdown ">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[100] p-2 shadow bg-base-100 rounded-box w-52 ">
                         {links}
                     </ul>
                 </div>
@@ -67,10 +70,15 @@ const Navbar = () => {
             <div className="navbar-end flex items-center gap-2">
                 {
                     user ?
-                        <div className="flex justify-center items-center gap-2"><label tabIndex={0} className="btn btn-ghost btn-circle avatar hidden md:flex">
+                        <div className="flex justify-center items-center gap-2">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar hidden md:flex">
+                                
                                 <div className="w-10 rounded-full ">
+                                    <Link to='/account'>
                                     <img src={user.photoURL} alt="user" />
+                                    </Link>
                                 </div>
+                                
                             </label>
                             <button  data-aos="zoom-in" data-aos-duration="2000" onClick={handleLogOut} className="btn   bg-amber-900 text-white btn-sm md:btn-md">Log Out</button>
                         </div> :
