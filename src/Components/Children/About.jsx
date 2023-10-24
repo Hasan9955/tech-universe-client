@@ -6,21 +6,21 @@ import { TfiWrite } from 'react-icons/tfi';
 const About = () => {
     return (
         <div className='p-5 mt-10 text-center flex flex-col justify-center items-center'>
-            <h3 className=" text-4xl text-pink-500">Hello! We Are an Event Planning Agency</h3>
-            <h4 className="text-3xl my-2">Our Mission: Your Vision, Our Expertise</h4>
-            <p>Our mission is simple yet profound: to bring your vision to life and exceed your expectations.  We believe<br /> that no two events are alike, which is why we take the time to understand your dreams,  your style,<br /> and your unique story. Whether you have a clear vision or need inspiration, we are here to guide you every step of the way.</p>
+            <h3 className=" text-5xl font-bold text-amber-600">About Us</h3>
+            <h4 className="text-3xl my-2">Unveiling the Tech Universe Story</h4>
+            <p className='text-lg'>As we move forward, our dedication to innovation and customer satisfaction remains unwavering. Thank you for being a part of the Tech Universe community, where the future of technology is a reality.</p>
             <div>
                 <div className='grid md:grid-cols-2 gap-5 mt-10'>
-                    <div data-aos="fade-up-right" data-aos-duration="1500" className='flex gap-3 border-2 rounded-xl p-3 shadow-xl'>
+                    <div className='flex gap-3 border-2 rounded-xl p-3 shadow-xl'>
                         <div className='text-4xl'><FaLocationDot></FaLocationDot></div>
                         <div>
                             <p className="text-2xl">Postal Address</p>
-                            <p>Party Pluse</p>
-                            <p>2nd floor,Bhuiyan tower, <br />Hatirgil, Dhaka</p>
+                            <p>Tech Universe</p>
+                            <p>2nd floor, Abdullah Mansion, <br />Mirpur, Dhaka</p>
                         </div>
 
                     </div >
-                    <div data-aos="fade-up-left" data-aos-duration="1500" className='flex gap-3 border-2 rounded-xl p-3 shadow-xl'>
+                    <div className='flex gap-3 border-2 rounded-xl p-3 shadow-xl'>
                         <div className='text-4xl'><BsFillClockFill></BsFillClockFill></div>
                         <div>
                             <p className="text-2x">Open Hours</p>
@@ -29,7 +29,7 @@ const About = () => {
                             <p>Weekends Close</p>
                         </div>
                     </div>
-                    <div data-aos="fade-up-right" data-aos-duration="1500" className='flex gap-3 border-2 rounded-xl p-3 shadow-xl'>
+                    <div className='flex gap-3 border-2 rounded-xl p-3 shadow-xl'>
                         <div className='text-4xl'><AiOutlinePhone></AiOutlinePhone></div>
                         <div>
                             <p className="text-2xl">Phone & Email</p>
@@ -39,7 +39,7 @@ const About = () => {
                         </div>
 
                     </div>
-                    <div data-aos="fade-up-left" data-aos-duration="1500" className=' flex gap-3 border-2 rounded-xl p-3 shadow-xl'>
+                    <div className=' flex gap-3 border-2 rounded-xl p-3 shadow-xl'>
                         <div className='text-4xl'><TfiWrite></TfiWrite></div>
                         <div>
                             <p className="text-2xl">Sessions</p>

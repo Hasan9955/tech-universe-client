@@ -8,6 +8,7 @@ const Login = () => {
     const { signIn, googleSign } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
+    console.log(location)
     const [error, setError] = useState(null)
     
 
@@ -15,6 +16,7 @@ const Login = () => {
         googleSign()
         .then(() => {
             toast.success('Login Successfully')
+            
             navigate(location.state)
         })
         .catch(error => {

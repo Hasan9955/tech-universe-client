@@ -3,6 +3,7 @@ import { AuthContext } from "../../Auth/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
@@ -34,6 +35,19 @@ const Register = () => {
 
                 toast.success('Registration Successful !!!')
                 navigate("/")
+                Swal.fire({
+                    title: 'Registration Successful',
+                    text: "Please reload the page for a better experience!",
+                    icon: 'success',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes reload it!'
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                      location.reload()
+                    }
+                  })
                 
             })
             .catch(error => setEmailError(error))
