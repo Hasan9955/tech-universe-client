@@ -4,6 +4,7 @@ import { AuthContext } from "../../Auth/AuthProvider";
 import { toast } from "react-toastify";
 
 
+
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
 
@@ -46,7 +47,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className="navbar bg-base-100 shadow-xl mb-5">
+        <div className="navbar bg-white shadow-xl mb-5 rounded-b-xl">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -56,7 +57,7 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <Link to='/' className=" "><img className="w-36" src="https://i.ibb.co/CVBrJFq/Screenshot-275.png" alt="" /></Link>
+                <Link data-aos="fade-right" data-aos-duration="1000" to='/' className=" "><img className="w-36" src="https://i.ibb.co/CVBrJFq/Screenshot-275.png" alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-2">
@@ -66,16 +67,14 @@ const Navbar = () => {
             <div className="navbar-end flex items-center gap-2">
                 {
                     user ?
-                        <div className="flex justify-center items-center gap-2">
-                            <p className="border p-2 rounded font-bold hidden md:flex">{user.displayName}</p>
-                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar hidden md:flex">
+                        <div className="flex justify-center items-center gap-2"><label tabIndex={0} className="btn btn-ghost btn-circle avatar hidden md:flex">
                                 <div className="w-10 rounded-full ">
-                                    <img src={user.photoURL} />
+                                    <img src={user.photoURL} alt="user" />
                                 </div>
                             </label>
-                            <button onClick={handleLogOut} className="btn   bg-amber-900 text-white btn-sm md:btn-md">Log Out</button>
+                            <button  data-aos="zoom-in" data-aos-duration="2000" onClick={handleLogOut} className="btn   bg-amber-900 text-white btn-sm md:btn-md">Log Out</button>
                         </div> :
-                        <button className="btn bg-amber-900 text-white "><Link to='/login'>Log In</Link></button>
+                        <button  data-aos="zoom-in" data-aos-duration="2000" className="btn bg-amber-900 text-white "><Link to='/login'>Log In</Link></button>
                 }
                 <label className="swap swap-rotate">
 

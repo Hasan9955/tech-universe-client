@@ -13,7 +13,7 @@ const Home = () => {
             <Slider></Slider>
             <h2 className="mt-10 text-3xl md:text-5xl text-center font-bold text-amber-600">TECH UNIVERSE</h2>
             <h2 className="text-2xl md:text-3xl text-center  font-extrabold ">Explore Our Awesome Brands</h2>
-            <div className="grid grid-cols-1 px-20 md:grid-cols-3 gap-5 my-10">
+            <div className="grid grid-cols-1 md:px-20 p-5 md:grid-cols-3 gap-5 my-10">
 
                 {
                     brandCards.map(card =>

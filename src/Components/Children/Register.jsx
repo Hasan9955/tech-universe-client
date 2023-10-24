@@ -34,7 +34,6 @@ const Register = () => {
 
                 toast.success('Registration Successful !!!')
                 navigate("/")
-                location.reload()
                 
             })
             .catch(error => setEmailError(error))

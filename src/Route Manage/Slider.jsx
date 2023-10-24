@@ -36,7 +36,7 @@ const Slider = () => {
           enabled: true,
         }}
         autoplay={{
-            delay: 4000,
+            delay: 5000,
             disableOnInteraction: false,
           }}
         pagination={{
@@ -52,12 +52,12 @@ const Slider = () => {
             <div>
                        
                         
-                        <SwiperSlide><img className='w-full' src="https://i.ibb.co/VvGbkmz/gaming-laptop.png" alt="" /></SwiperSlide>
+                        <SwiperSlide ><img className='w-full' src="https://i.ibb.co/VvGbkmz/gaming-laptop.png" alt="" /></SwiperSlide>
                         <SwiperSlide><img className='w-full' src="https://i.ibb.co/TLKwXGw/homeslider.png" alt="" /></SwiperSlide>
                         
                         <SwiperSlide><img className='w-full' src="https://i.ibb.co/k0c2xcT/Untitled-2.png" alt="" /></SwiperSlide>
 
-                        <SwiperSlide><img className='w-full' src="https://i.ibb.co/fNJfX9F/home-slider.png" alt="" /></SwiperSlide>
+                        <SwiperSlide><img className='w-full' src="https://i.ibb.co/F5xfKk3/Un-slide.png" alt="" /></SwiperSlide>
                     </div>
                     }
       </Swiper>

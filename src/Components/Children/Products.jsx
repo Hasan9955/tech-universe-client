@@ -7,7 +7,7 @@ const Products = () => {
     
     
     
-    
+    const handleWindow = () => window.scrollTo(10, 10)
     return (
         <div>
             
@@ -45,7 +45,7 @@ const Products = () => {
                         <img src="https://i.ibb.co/BnMb4PR/no-product-found-1.png" alt="" />
                         <h1 className="text-5xl">Sorry !!!</h1>
                         <h2 className="text-3xl font-bold">This brand currently has no products available for display.</h2>
-                        <Link to='/'><button className="btn btn-primary rounded-full">Go Home</button></Link>
+                        <Link to='/'><button onClick={handleWindow} className="btn btn-primary rounded-full">Go Home</button></Link>
                     </div>
             }
         </div>
