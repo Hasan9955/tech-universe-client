@@ -7,7 +7,7 @@ const Products = () => {
     
     
     
-    const handleWindow = () => window.scrollTo(10, 10)
+    const handleWindow = () => window.scrollTo(0, 0)
     return (
         <div>
             

@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/brands')
+        loader: () => fetch('https://technology-shop-server-l150fk00p-hasan-bin-alis-projects.vercel.app/brands')
       },
       {
         path: '/addProduct',
@@ -42,12 +42,12 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <PrivateRoute><Cart></Cart></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/cart')
+        loader: () => fetch('https://technology-shop-server-l150fk00p-hasan-bin-alis-projects.vercel.app/cart')
       },
       {
         path: '/details/:id',
         element: <PrivateRoute><Details></Details></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
+        loader: ({params}) => fetch(`https://technology-shop-server-l150fk00p-hasan-bin-alis-projects.vercel.app/details/${params.id}`)
       },
       {
         path: '/login',
@@ -60,12 +60,12 @@ const router = createBrowserRouter([
       {
         path: '/products/:name',
         element: <Products></Products>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.name}`)
+        loader: ({ params }) => fetch(`https://technology-shop-server-l150fk00p-hasan-bin-alis-projects.vercel.app/products/${params.name}`)
       },
       {
         path: '/update/:id',
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/update/${params.id}`)
+        loader: ({params}) => fetch(`https://technology-shop-server-l150fk00p-hasan-bin-alis-projects.vercel.app/update/${params.id}`)
       },
       {
         path: '/account',
@@ -74,12 +74,12 @@ const router = createBrowserRouter([
       {
         path: '/blog',
         element: <Blogs></Blogs>,
-        loader: () => fetch('http://localhost:5000/blog')
+        loader: () => fetch('https://technology-shop-server-l150fk00p-hasan-bin-alis-projects.vercel.app/blog')
       },
       {
         path: '/blog/:id',
         element: <BlogDetails></BlogDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/blog/${params.id}`)
+        loader: ({params}) => fetch(`https://technology-shop-server-l150fk00p-hasan-bin-alis-projects.vercel.app/blog/${params.id}`)
       },
       {
         path: '/about',

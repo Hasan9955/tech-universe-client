@@ -10,7 +10,7 @@ const About = () => {
     const handleForm = (e) => {
         e.preventDefault()
         const form = e.target
-        toast.success("I'm grateful for your succinct note.")
+        toast.success("Thank you for reaching out to us.")
         form.reset()
         
 

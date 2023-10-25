@@ -12,7 +12,7 @@ const Slider = () => {
 
 
     useEffect (() => {
-        fetch('http://localhost:5000/productSlider')
+        fetch('https://technology-shop-server-l150fk00p-hasan-bin-alis-projects.vercel.app/productSlider')
         .then(res => res.json())
         .then(data => setPhoto(data))
     },[])

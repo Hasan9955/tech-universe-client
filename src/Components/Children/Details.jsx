@@ -12,7 +12,7 @@ const Details = () => {
 
     const cartProduct = { product, userEmail }
     const handleCart = () => {
-        fetch('http://localhost:5000/cart', {
+        fetch('https://technology-shop-server-l150fk00p-hasan-bin-alis-projects.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

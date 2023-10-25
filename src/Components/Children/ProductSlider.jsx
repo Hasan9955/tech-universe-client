@@ -16,7 +16,7 @@ const ProductSlider = () => {
 
     useEffect(() => {
         const loadSlide = async () => {
-            const response = await fetch('http://localhost:5000/productSlider')
+            const response = await fetch('https://technology-shop-server-l150fk00p-hasan-bin-alis-projects.vercel.app/productSlider')
             const data = await response.json()
             setSlides(data)
         }

@@ -20,7 +20,7 @@ const AddProduct = () => {
         
         
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://technology-shop-server-l150fk00p-hasan-bin-alis-projects.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
