@@ -21,6 +21,7 @@ import Update from './Components/Children/Update';
 import MyAccount from './Components/Children/MyAccount';
 import Blogs from './Components/Children/Blogs';
 import BlogDetails from './Components/Children/BlogDetails';
+import About from './Components/Children/About';
 
 
 const router = createBrowserRouter([
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
         path: '/blog/:id',
         element: <BlogDetails></BlogDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/blog/${params.id}`)
+      },
+      {
+        path: '/about',
+        element: <About></About>
       }
       
 

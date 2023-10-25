@@ -16,7 +16,8 @@ const Products = () => {
                 loadProducts.length > 0 ?
                 <div>
                     <ProductSlider></ProductSlider>
-                    <h2 className="text-center text-2xl md:text-3xl mt-10 font-bold text-pink-600">Welcome to the immersive universe of the {loadProducts[0].brand} Brand !!!</h2>
+                    <h3 className="text-center text-3xl md:text-4xl lg:text-5xl mt-10 text-amber-600 font-bold">{loadProducts[0].brand}</h3>
+                    <h2 className="text-center text-xl md:text-2xl lg:text-3xl font-bold text-pink-600">Welcome to the immersive universe of the {loadProducts[0].brand} Brand !!!</h2>
                     <div className="grid p-3 mb-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {
                             loadProducts.map(product =>

@@ -12,8 +12,8 @@ const Home = () => {
         <div>
             
             <Slider></Slider>
-            <h2 className="mt-10 text-3xl md:text-5xl text-center font-bold text-amber-600">TECH UNIVERSE</h2>
-            <h2 className="text-2xl md:text-3xl text-center  font-extrabold ">Explore Our Awesome Brands</h2>
+            <h2 className="mt-10 text-2xl md:text-4xl lg:text-5xl text-center font-bold text-amber-600">TECH UNIVERSE</h2>
+            <h2 className="text-sm md:text-2xl lg:text-3xl text-center  font-bold ">Explore Our Awesome Brands</h2>
             <div className="grid grid-cols-2 md:px-20 p-5 md:grid-cols-3 gap-5 my-10">
 
                 {
@@ -38,7 +38,7 @@ const Home = () => {
 
             <div className="flex flex-col justify-center items-center p-3">
                 <h2 className="text-2xl md:text-4xl lg:text-5xl text-center font-bold text-amber-600 ">Reed Our Tech Blogs</h2>
-                <p className="text-lg md:text-2xl font-bold text-center mt-2">Explore our latest blogs and stay updated with the latest  <br /> tech trends and insights right here on our website.</p>
+                <p className="text-sm md:text-lg font-bold text-center mt-2  max-w-lg">Explore our latest blogs and stay updated with the latest tech trends and insights right here on our website.</p>
 
 
 
@@ -46,7 +46,7 @@ const Home = () => {
                 <div className="grid md:grid-cols-2 gap-5 mt-10">
                     <div className="p-5 shadow-xl rounded-xl lg:w-96 ">
                         <img  className="rounded-xl " src="https://i.ibb.co/VtSXXHT/Untitle.png" alt="" />
-                        <hr />
+                        
                         <div className="mt-2 p-2">
                             <div className="md:flex justify-between mb-2"><p  className="text-xl font-bold">Lenovo Legion 7</p><p>2023-08-30</p></div>
                             <h2>Lenovo</h2>
@@ -61,7 +61,7 @@ const Home = () => {
 
                     <div className="p-5 shadow-xl rounded-xl lg:w-96">
                         <img  className="rounded-xl " src="https://i.ibb.co/9TjdD6B/Untitled3.png" alt="" />
-                        <hr />
+                        
                         <div className="mt-2 p-2">
                             <div className="md:flex justify-between mb-2"><p  className="text-xl font-bold">Microsoft Pro 8</p><p>2023-09-30</p></div>
                             <h2>Microsoft</h2>
@@ -76,7 +76,7 @@ const Home = () => {
 
                     <div className="p-5 shadow-xl rounded-xl lg:w-96">
                         <img  className="rounded-xl " src="https://i.ibb.co/DwLw1Wr/Untitled.png" alt="" />
-                        <hr />
+                        
                         <div className="mt-2 p-2">
                             <div className="md:flex justify-between mb-2"><p  className="text-xl font-bold">Google Pixel 7</p><p>2023-09-12</p></div>
                             <h2>Google</h2>
@@ -92,7 +92,7 @@ const Home = () => {
 
                     <div className="p-5 shadow-xl rounded-xl lg:w-96">
                         <img  className="rounded-xl " src="https://i.ibb.co/swBhv8m/Untitle.png" alt="" />
-                        <hr />
+                        
                         <div className="mt-2 p-2">
                             <div className="md:flex justify-between mb-2"><p  className="text-xl font-bold">Galaxy Watch 5</p><p>2023-10-18</p></div>
                             <h2>Samsung</h2>

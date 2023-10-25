@@ -8,7 +8,6 @@ const Login = () => {
     const { signIn, googleSign } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
-    console.log(location)
     const [error, setError] = useState(null)
     
 
